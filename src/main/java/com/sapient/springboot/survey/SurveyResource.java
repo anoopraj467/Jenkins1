@@ -1,5 +1,7 @@
 package com.sapient.springboot.survey;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -11,12 +13,15 @@ public class SurveyResource {
 
     private SurveyService surveyService;
 
+    Logger logger = LoggerFactory.getLogger(SurveyResource.class);
+
     public SurveyResource(SurveyService surveyService) {
         this.surveyService = surveyService;
     }
 
     @RequestMapping("/surveys")
     public List<Survey> retrieveAllService(){
+        logger.trace("FATAL ERROR");
         return surveyService.retrieveAllService();
     }
     @RequestMapping("/surveys/{surveyId}")
