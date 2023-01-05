@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-springboot-deployment
+  name: my-springboot-deployment1
 spec:
   replicas: 3
   selector:
