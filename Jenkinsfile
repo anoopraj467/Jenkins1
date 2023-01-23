@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools{
-        maven "Maven3"
+        maven "maven3"
     }
 
      environment{
-        registryName = "myapp111"
+        registryName = "acranoop123"
         registryCredential = "ACR"
-        registryUrl = "myapp111.azurecr.io"
+        registryUrl = "acranoop123.azurecr.io"
         dockerImage = ""
     }
 
